@@ -14,11 +14,11 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - run : docker build . -t TEST-CONTAINER:latest
+      - run : docker build . -t test-container:latest
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: docker run TEST-CONTAINER:latest yarn run test
+      - run: docker run test-container:latest yarn run test
