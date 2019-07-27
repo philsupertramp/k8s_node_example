@@ -5,7 +5,11 @@ const app = express();
 app.get("/", (req, res) => {
 	res.send("<h2>Hello World!</h2><img src='https://www.getdigital.de/web/getdigital/gfx/products/__generated__resized/1100x1100/Aufkleber_Trollface.jpg' height='100%'/>");
 });
+var args = process.argv.slice(2);
 
+if('test' === args[0]){
+	return true;
+}
 
 app.listen(3000, () => {
 	console.log("App started at port 3000.\n");
