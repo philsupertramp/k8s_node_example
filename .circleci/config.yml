@@ -22,4 +22,4 @@ jobs:
 
       # run tests!
       - command: |
-	 docker run test-container:latest yarn run test --entrypoint=''
+          docker run test-container:latest yarn run test --entrypoint=''
