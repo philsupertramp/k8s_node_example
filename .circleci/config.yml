@@ -21,5 +21,7 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - command: |
-          docker run test-container:latest yarn run test --entrypoint=''
+      - run:
+          name: "Run tests"
+          command: |
+              docker run test-container:latest yarn run test --entrypoint=''
