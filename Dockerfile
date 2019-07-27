@@ -8,6 +8,6 @@ COPY . .
 
 RUN yarn install
 
-EXPOSE ["3000:3000/tcp"]
+EXPOSE 3000/tcp
 
 ENTRYPOINT ["yarn", "run", "start"]
