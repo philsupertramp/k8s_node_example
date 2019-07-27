@@ -1,8 +1,8 @@
-from node:11.4
+FROM node:11.4
 
-RUN mkdir -p /web/code
+RUN mkdir -p /data/web
 
-WORKDIR /web/code
+WORKDIR /data/web
 
 COPY . .
 
@@ -11,3 +11,4 @@ RUN yarn install
 EXPOSE 3000/tcp
 
 ENTRYPOINT ["yarn", "run", "start"]
+
